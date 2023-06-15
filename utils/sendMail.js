@@ -9,7 +9,7 @@ try{
 
         auth:{
             user:"chitrarasumit@gmail.com",
-            pass:"luxippekmxgxicjk"
+            pass:"arnohytlhtezqplm"
         }
     })
     let mailDetails={
