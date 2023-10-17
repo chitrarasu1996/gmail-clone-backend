@@ -8,8 +8,12 @@ const contentDetails = require("../models/content.model");
 const contentModel = require("../models/content.model");
 exports.register = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password } = req.body
+       const oldUser=await emails.findOne({email})
         const soltingRounds = 12;
+        if(oldUser){
+            return res.status(200).send({message:"already registered"})
+        }
         if (!email || !password) {
             return res.status(201).send({ message: "email or password mandetory" })
         }
